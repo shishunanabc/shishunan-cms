@@ -19,4 +19,6 @@ public interface ArticleService {
 	List<Article> select(Article article);
 	List<Article> coCount();
 	void commentCount(Integer articleId);
+	//添加点击量
+	int click(Integer id);
 }

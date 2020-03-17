@@ -46,6 +46,15 @@ String htmlData = request.getParameter("content1") != null ? request.getParamete
 			<label for="summary">文章摘要</label> <input id="summary"
 				class="form-control form-control-sm" type="text" name="summary">
 		</div>
+		<!-- 月考 -->
+		<div class="form-group">
+			<label for="summary">关键字</label> <input id="keywords"
+				class="form-control form-control-sm" type="text" name="keywords">
+		</div>
+		<div class="form-group">
+			<label for="summary">来源</label> <input id="original"
+				class="form-control form-control-sm" type="text" name="original">
+		</div>
 		<div class="form-group">
 			<label for="file">标题图片</label> <input id="file"
 				class="form-control-file form-control-sm" type="file" name="file2">

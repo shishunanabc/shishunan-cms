@@ -73,6 +73,11 @@ public class ArticleServiceImpl implements ArticleService{
 		// TODO Auto-generated method stub
 		dao.commentCount(articleId);
 	}
+
+	public int click(Integer id) {
+		// TODO Auto-generated method stub
+		return dao.click(id);
+	}
 	
 	
 }

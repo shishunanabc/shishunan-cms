@@ -37,9 +37,9 @@ public class Article implements Serializable {
 	private User user;
 	private Integer contentType;
 
-	private String keywords;
+	private String keywords;//关键词字段
 
-	private String original;
+	private String original;//文章来源字段
 
 	public Integer getId() {
 		return id;

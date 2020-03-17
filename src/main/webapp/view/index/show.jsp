@@ -9,6 +9,8 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="keywords" content=${g.keywords }>
+<meta name="descrption" content=${g.original }>
 <title>${g.title }</title>
 <%-- <link  href="<%=request.getContextPath() %>/css/index3.css"     rel="stylesheet"   type="text/css">
  --%><script type="text/javascript"  src="<%=request.getContextPath() %>/js/jquery-3.2.1.js"></script>
@@ -29,6 +31,7 @@
 				<div>
 					<h1>标题：${g.title }</h1>
 					<h6>作者：${g.user.username }</h6>
+					<h6>来源：${g.original }</h6>
 					${g.content }
 					<hr>
 					<div>
@@ -125,6 +128,17 @@
 						}
 					})
 		}
+		var id=${g.id}
+		$.post(
+				"/click",
+				{id:id},
+				function(img) {
+					if (img>0) {
+						
+					}else {
+						
+					}
+				})
 	</script>
 </body>
 </html>

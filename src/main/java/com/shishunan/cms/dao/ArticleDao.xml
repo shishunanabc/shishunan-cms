@@ -9,9 +9,9 @@
   	</select>
   	<insert id="insert">
   		insert into 
-  		cms_article(title,content,summary,user_id,channel_id,category_id,created,updated,hits,hot,deleted,status,content_type,picture)
+  		cms_article(title,content,summary,user_id,channel_id,category_id,created,updated,hits,hot,deleted,status,content_type,picture,keywords,original)
   		values(#{title},#{content},#{summary},#{userId},#{channelId},#{categoryId},
-  		#{created},#{updated},#{hits},#{hot},#{deleted},#{status},#{contentType},#{picture})
+  		#{created},#{updated},#{hits},#{hot},#{deleted},#{status},#{contentType},#{picture},#{keywords},#{original})
   	</insert>
   	<select id="cha" resultType="Article">
   		select * from cms_article where
@@ -105,4 +105,7 @@
 		select * from cms_article
 		order by cocount desc
 	</select>
+	<insert id="click">
+		update cms_article set hits=hits+1 where id=#{idd}
+	</insert>
   </mapper>

@@ -32,6 +32,8 @@ public interface ArticleDao {
 	List<Article> coCount();
 	@Update("update cms_article set cocount=cocount+1 where id=#{idd}")
 	void commentCount(@Param("idd")Integer articleId);
+	//添加点击量
+	int click(@Param("idd")Integer id);
 
 	
 }

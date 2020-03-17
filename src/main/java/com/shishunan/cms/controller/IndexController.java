@@ -101,4 +101,14 @@ public class IndexController {
 	public int deleteCollect(Integer id) {
 		return service5.delete(id);
 	}
+	//添加点击量
+	@RequestMapping("click")
+	@ResponseBody
+	public int click(HttpSession session,Integer id) {
+		User user=(User) session.getAttribute("user");
+		if (user==null) {
+			return 0;
+		}
+		return service2.click(id);
+	}
 }
